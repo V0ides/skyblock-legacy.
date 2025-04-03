@@ -420,6 +420,7 @@ public class PlayerListener implements Listener {
         SkyblockPlayer player = SkyblockPlayer.getPlayer(event.getPlayer());
 
         player.onQuit();
+        event.setQuitMessage(null);
     }
 
     @EventHandler

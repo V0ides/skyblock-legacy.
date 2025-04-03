@@ -1,0 +1,296 @@
+{
+  "category": "Farming",
+  "collections": [
+    {
+      "name": "Cactus",
+      "material": "CACTUS",
+      "data": 0,
+      "rewards": [
+        "100;&9Cactus Minion &7Recipes",
+        "250;&fCactus Helmet &7Recipe\n  &fCactus Chestplate &7Recipe\n  &fCactus Leggings &7Recipe\n  &fCactus Boots &7Recipe",
+        "500;&aResistance Potion &7Recipe",
+        "1000;&aEnchanted Cactus Green &7Recipe",
+        "2500;&fDesert Island &7Recipe",
+        "5000;&fEnchanted Book (Piercing I) &7Recipe",
+        "10000;&fEnchanted Book (Thorns II) &7Recipe",
+        "25000;&9Enchanted Cactus &7Recipe",
+        "50000;&8+&3&35,000 &7Farming Experience"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Carrot",
+      "material": "CARROT_ITEM",
+      "data": 0,
+      "rewards": [
+        "100;&9Carrot Minion &7Recipes",
+        "250;&aSimple Carrot Candy &7Recipe",
+        "500;&fCarrot Bait &7Recipe",
+        "1700;&aEnchanted Carrot &7Recipe",
+        "5000;&aEnchanted Carrot on a Stick &7Recipe",
+        "10000;&9Great Carrot Candy &7Recipe\n  &5Super Catching Egg &8(&4COMING &4SOON&8)",
+        "25000;&aEnchanted Golden Carrot &7Recipe",
+        "50000;&5Superb Carrot Candy &7Recipe",
+        "100000;&5Mega Catching Egg &8(&4COMING &4SOON&8)"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Cocoa Beans",
+      "material": "INK_SACK",
+      "data": 3,
+      "rewards": [
+        "75;&9Cocoa Beans Minion &7Recipes",
+        "200;&8+&320 &7Farming Experience",
+        "500;&fPortal to the Mushroom Desert &7Recipe",
+        "2000;&aEnchanted Cocoa Bean &7Recipe",
+        "5000;&9Travel Scroll to the Mushroom Desert &7Recipe",
+        "10000;&9Enchanted Cookie &7Recipe",
+        "20000;&fAdrenaline Potion &7Recipe",
+        "50000;&fEnchanted Book (Replenish I) &7Recipe",
+        "100000;&8+&310000 &7Farming Experience"
+      ],
+      "commands": [
+        "sb unlockminion cocoa_bean"
+      ]
+    },
+    {
+      "name": "Feather",
+      "material": "FEATHER",
+      "data": 0,
+      "rewards": [
+        "50;&fEnchanted Book (Projectile Protection IV) &7Recipe",
+        "100;&fEnchanted Book (Feather Falling IV) &7Recipe",
+        "250;&fArchery Potion &7Recipe",
+        "1000;&fFeather Talisman &7Recipe",
+        "2500;&aEnchanted Feather &7Recipe",
+        "5000;&fEnchanted Book (Aiming IV) &7Recipe",
+        "10000;&aFeather Ring &7Recipe",
+        "25000;&fEnchanted Book (Snipe II) &7Recipe",
+        "50000;&9Feather Artifact &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Leather",
+      "material": "LEATHER",
+      "data": 0,
+      "rewards": [
+        "50;&fCow Minion &7Recipes",
+        "100;&fCow Head &7Recipe\n  &fMilk Bucket &7Trade",
+        "250;&aSmall Backpack &7Recipe",
+        "1000;&aEnchanted Raw Beef &7Recipe",
+        "2500;&9Medium Backpack &7Recipe",
+        "5000;&aEnchanted Leather &7Recipe",
+        "10000;&aSaddle &7Recipe",
+        "25000;&5Large Backpack &7Recipe",
+        "50000;&9Mystery Horse Pet &7Recipe",
+        "100000;&5Greater Backpack &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Melon",
+      "material": "MELON",
+      "data": 0,
+      "rewards": [
+        "250;&fMelon Minion &7Recipes",
+        "500;&8+&350 &7Farming Experience",
+        "1250;&8+&3125 &7Farming Experience",
+        "5000;&aEnchanted Melon &7Recipe",
+        "15500;&9Enchanted Glistering Melon &7Recipe",
+        "25000;&9Enchanted Melon Block &7Recipe",
+        "50000;&8+&35000 &7Farming Experience",
+        "100000;&8+&310000 &7Farming Experience",
+        "250000;&8+&325000 &7Farming Experience"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Mushroom",
+      "material": "RED_MUSHROOM",
+      "data": 0,
+      "rewards": [
+        "50;Mushroom Minion &7Recipes",
+        "100;&fMycelium &7Trade",
+        "250;&fMushroom Helmet &7Recipe\n  &fMushroom Chestplate &7Recipe\n  &fMushroom Leggings &7Recipe\n  &fMushroom Boots &7Recipe",
+        "1000;&aMagic Mushroom Soup &7Recipe",
+        "2500;&fBrown Mushroom Block &7Recipe\n  &fRed Mushroom Block &7Recipe",
+        "5000;&fEnchanted Brown Mushroom &7Recipe\n  &fEnchanted Red Mushroom &7Recipe",
+        "10000;&fNight Vision Charm &7Recipe",
+        "25000;&fEnchanted Brown Mushroom Block &7Recipe\n  &fEnchanted Red Mushroom Block &7Recipe",
+        "50000;&9Mystery Bat Pet &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Mutton",
+      "material": "MUTTON",
+      "data": 0,
+      "rewards": [
+        "50;&fSheep Minion &7Recipes",
+        "100;&8+&310 &7Farming Experience",
+        "250;&8+&325 &7Farming Experience",
+        "1000;&fMana Potion &7Recipe",
+        "2500;&aEnchanted Mutton &7Recipe\n  &aSmall Husbandry Sack &7Recipe",
+        "5000;&fEnchanted Book (Rainbow I) &7Recipe",
+        "10000;&9Mystery Sheep Pet &7Recipe\n  &9Medium Husbandry Sack &7Recipe",
+        "25000;&9Enchanted Cooked Mutton &7Recipe",
+        "50000;&9Polymorph Wand &8(&4COMING &4SOON&8)\n  &5Large Husbandry Sack &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Nether Wart",
+      "material": "NETHER_WARTS",
+      "data": 0,
+      "rewards": [
+        "50;&fNether Wart Minion &7Recipes",
+        "100;&aSmall Potion Bag Upgrade (9 Slots)",
+        "250;&fPotion Affinity Talisman &7Recipes",
+        "1000;&aEnchanted Nether Wart &7Recipes",
+        "2500;&aMedium Potion Bag Upgrade (18 Slots)",
+        "5000;&9+500 &7Alchemy Experience",
+        "10000;&aPotion Affinity Ring &7Recipes",
+        "25000;&aLarge Potion Bag Upgrade (27 Slots)",
+        "50000;&9Potion Affinity Artifact &7Recipes",
+        "75000;&aGiant Potion Bag Upgrade (36 slots)",
+        "100000;&aMassive Potion Bag Upgrade (45 Slots)"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Potato",
+      "material": "POTATO_ITEM",
+      "data": 0,
+      "rewards": [
+        "100;&fPotato Minion &7Recipes",
+        "200;&9Portal to the Barn &7Recipe",
+        "500;&fVaccine Talisman &7Recipe",
+        "1750;&aEnchanted Potato &7Recipe",
+        "5000;&fVenomous Potion &7Recipe",
+        "10000;&9Travel Scroll to the Barn &7Recipe",
+        "25000;&aEnchanted Baked Potato &7Recipe",
+        "50000;&5Hot Potato Book &7Recipe",
+        "100000;&8+&310000 &7Farming Experience"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Pumpkin",
+      "material": "PUMPKIN",
+      "data": 0,
+      "rewards": [
+        "40;&fPumpkin Minion &7Recipes",
+        "100;&fPumpkin Helmet &7Recipe\n  &fPumpkin Chestplate &7Recipe\n  &fPumpkin Leggings &7Recipe\n  &fPumpkin Boots &7Recipe",
+        "250;&aEnchanted Pumpkin &7Recipe",
+        "1000;&fEnchanted Book (Cubism IV) &7Recipe",
+        "2500;&aTraining Dummy &7Recipe",
+        "5000;&aFarmer Orb &7Recipe",
+        "10000;&aLantern Helmet &7Recipe",
+        "25000;&9Farm Crystal &7Recipe",
+        "50000;&aFarmer Boots &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Raw Chicken",
+      "material": "RAW_CHICKEN",
+      "data": 0,
+      "rewards": [
+        "50;&fChicken Minion &7Recipes",
+        "100;&fBridge Egg &7Recipe",
+        "250;&fChicken Head &7Recipe",
+        "1000;&aEnchanted Raw Chicken &7Recipe",
+        "2500;&9Enchanted Egg &7Recipe",
+        "5000;&9Mystery Chicken Pet &7Recipe",
+        "10000;&aEnchanted Cake &7Recipe",
+        "25000;&fAgility Potion &7Recipe",
+        "50000;&9Super Enchanted Egg &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Raw Porkchop",
+      "material": "PORK",
+      "data": 0,
+      "rewards": [
+        "50;&fPig Minion &7Recipes",
+        "100;&8+&310 &7Farming Experience",
+        "250;&9Mystery Pig Pet &7Recipe",
+        "1000;&aEnchanted Pork &7Recipe",
+        "2500;&aPiggy Bank &7Recipe",
+        "5000;&8+&3500 &7Farming Experience",
+        "10000;&9Enchanted Grilled Pork &7Recipe",
+        "25000;&9Mystery Pigman Pet &7Recipe",
+        "50000;&6Pigman Sword &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Raw Rabbit",
+      "material": "RABBIT",
+      "data": 0,
+      "rewards": [
+        "50;&fRabbit Minion &7Recipes",
+        "100;&9Mystery Rabbit Pet &7Recipe",
+        "250;&fRabbit Potion &7Recipe",
+        "1000;&aEnchanted Rabbit Foot &7Recipe",
+        "2500;&fEnchanted Book (Luck IV) &7Recipe",
+        "5000;&aEnchanted Rabbit Hide &7Recipe",
+        "10000;&fEnchanted Book (Luck of the Sea IV) &7Recipe",
+        "25000;&fPet Luck Potion &7Recipe",
+        "50000;&8+&35000 &7Farming Experience"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Seeds",
+      "material": "SEEDS",
+      "data": 0,
+      "rewards": [
+        "50;&fDirt &7Trade",
+        "100;&fClay &7Trade",
+        "250;&fLong Grass &7Trade",
+        "1000;&fFern &7Trade",
+        "2500;&fDead Bush &7Trade",
+        "5000;&fDouble Tallgrass &7Trade"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Sugar Cane",
+      "material": "SUGAR_CANE",
+      "data": 0,
+      "rewards": [
+        "100;&fSugar Cane Minion &7Recipes",
+        "250;&fSpeed Talisman &7Recipe",
+        "500;&8+&350 &7Farming Experience",
+        "1000;&aEnchanted Sugar &7Recipe",
+        "2000;&aEnchanted Paper &7Recipe\n  &aSpeed Ring &7Recipe",
+        "5000;&aEnchanted Bookshelf &7Recipe",
+        "10000;&aRandom Book &8(&4COMING &4SOON&8)",
+        "20000;&9Enchanted Sugar Cane &7Recipe\n  &9Speed Artifact &7Recipe",
+        "50000;&5Speedster Helmet &7Recipe\n  &5Speedster Chestplate &7Recipe\n  &5Speedster Leggings &7Recipe\n  &5Speedster Boots &7Recipe"
+      ],
+      "commands": []
+    },
+    {
+      "name": "Wheat",
+      "material": "WHEAT",
+      "data": 0,
+      "rewards": [
+        "50;&fWheat Minion &7Recipes",
+        "100;&fEnchanted Book (Harvesting V) &7Recipe",
+        "250;&fFarm Suit Helmet &7Recipe\n  &fFarm Suit Chestplate &7Recipe\n  &fFarm Suit Leggings &7Recipe\n  &fFarm Suit Boots &7Recipe",
+        "500;&fFarming Talisman &7Recipe",
+        "1000;&fEnchanted Bread &7Recipe\n  &aSmall Agronomy Sack &7Recipe",
+        "2500;&fFarming Island &7Recipe",
+        "10000;&aEnchanted Hay Block &7Recipe\n  &9Medium Agronomy Sack &7Recipe",
+        "15000;&9Farm Armor Helmet &7Recipe\n  &9Farm Armor Chestplate &7Recipe\n  &9Farm Armor Leggings &7Recipe\n  &9Farm Armor Boots &7Recipe",
+        "50000;&5Large Agronomy Sack &7Recipe"
+      ],
+      "commands": []
+    }
+  ]
+}

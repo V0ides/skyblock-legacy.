@@ -130,5 +130,58 @@ public abstract class Scoreboard {
                 break;
         }
     }
+    
+    public void animateCoopTitle() {
+        switch (animation) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 21:
+            case 22:
+                objective.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "SKYBLOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 11:
+                objective.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "S" + ChatColor.YELLOW + "" + ChatColor.BOLD + "KYBLOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 12:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "S" + ChatColor.GOLD + "" + ChatColor.BOLD + "K" + ChatColor.YELLOW + "" + ChatColor.BOLD + "YBLOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 13:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SK" + ChatColor.GOLD + "" + ChatColor.BOLD + "Y" + ChatColor.YELLOW + "" + ChatColor.BOLD + "BLOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 14:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKY" + ChatColor.GOLD + "" + ChatColor.BOLD + "B" + ChatColor.YELLOW + "" + ChatColor.BOLD + "LOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 15:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKYB" + ChatColor.GOLD + "" + ChatColor.BOLD + "L" + ChatColor.YELLOW + "" + ChatColor.BOLD + "OCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 16:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKYBL" + ChatColor.GOLD + "" + ChatColor.BOLD + "O" + ChatColor.YELLOW + "" + ChatColor.BOLD + "CK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 17:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKYBLO" + ChatColor.GOLD + "" + ChatColor.BOLD + "C" + ChatColor.YELLOW + "" + ChatColor.BOLD + "K " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 18:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKYBLOC" + ChatColor.GOLD + "" + ChatColor.BOLD + "K " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            case 19:
+            case 20:
+            case 23:
+            case 24:
+                objective.setDisplayName(ChatColor.WHITE + "" + ChatColor.BOLD + "SKYBLOCK " + ChatColor.AQUA + "" + ChatColor.BOLD + "CO-OP");
+                break;
+            default:
+                animation = 0;
+                break;
+        }
+    }
 
 }

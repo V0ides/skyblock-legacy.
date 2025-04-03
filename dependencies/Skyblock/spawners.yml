@@ -1,0 +1,337 @@
+ids:
+  - ZOMBIE_DIAMOND_RESERVE
+  - SKELETON_DIAMOND_RESERVE
+  - SKELETON_OBSIDIAN_SANCTUARY
+  - ZOMBIE_OBSIDIAN_SANCTUARY
+  - EMERALD_SLIME_SMALL_SLIME
+  - EMERALD_SLIME_MEDIUM_SLIME
+  - EMERALD_SLIME_LARGE_SLIME
+  - REDSTONE_PIGMAN_REDSTONE_PIGMAN
+  - ZOMBIE_LAPIS_ZOMBIE
+  - SNEAKY_CREEPER_SNEAKY_CREEPER
+  - ZOMBIE_GRAVEYARD
+  - ZOMBIE_ZOMBIE_VILLAGER
+  - ZOMBIE_CRYPT_GHOUL
+  - ZOMBIE_GOLDEN_GHOUL
+ZOMBIE_DIAMOND_RESERVE:
+  type: ZOMBIE
+  subType: DIAMOND_RESERVE
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 29.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 50.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+SKELETON_DIAMOND_RESERVE:
+  type: SKELETON
+  subType: DIAMOND_RESERVE
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 29.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 50.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+SKELETON_OBSIDIAN_SANCTUARY:
+  type: SKELETON
+  subType: OBSIDIAN_SANCTUARY
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 29.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 0.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: BEDROCK
+ZOMBIE_OBSIDIAN_SANCTUARY:
+  type: ZOMBIE
+  subType: OBSIDIAN_SANCTUARY
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 29.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 0.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: BEDROCK
+EMERALD_SLIME_SMALL_SLIME:
+  type: EMERALD_SLIME
+  subType: SMALL_SLIME
+  delay: 200
+  limit: 10
+  amount: 5
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 83.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 50.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+EMERALD_SLIME_MEDIUM_SLIME:
+  type: EMERALD_SLIME
+  subType: MEDIUM_SLIME
+  delay: 200
+  limit: 10
+  amount: 5
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 83.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 50.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+EMERALD_SLIME_LARGE_SLIME:
+  type: EMERALD_SLIME
+  subType: LARGE_SLIME
+  delay: 200
+  limit: 10
+  amount: 5
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 83.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 50.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: GRASS
+REDSTONE_PIGMAN_REDSTONE_PIGMAN:
+  type: REDSTONE_PIGMAN
+  subType: REDSTONE_PIGMAN
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 83.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 111.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+ZOMBIE_LAPIS_ZOMBIE:
+  type: ZOMBIE
+  subType: LAPIS_ZOMBIE
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 136.0
+    z: -113.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 111.0
+    z: 124.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+SNEAKY_CREEPER_SNEAKY_CREEPER:
+  type: SNEAKY_CREEPER
+  subType: SNEAKY_CREEPER
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: -91.0
+    y: 190.0
+    z: -124.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: deep_caverns
+    x: 91.0
+    y: 136.0
+    z: 40.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+ZOMBIE_GRAVEYARD:
+  type: ZOMBIE
+  subType: GRAVEYARD
+  delay: 200
+  limit: 10
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: world
+    x: -72.0
+    y: 65.0
+    z: -169.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: world
+    x: -218.0
+    y: 104.0
+    z: -82.0
+    pitch: 0.0
+    yaw: 0.0
+  block: DIRT
+ZOMBIE_ZOMBIE_VILLAGER:
+  type: ZOMBIE
+  subType: ZOMBIE_VILLAGER
+  delay: 200
+  limit: 5
+  amount: 2
+  pos1:
+    ==: org.bukkit.Location
+    world: world
+    x: -72.0
+    y: 65.0
+    z: -169.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: world
+    x: -218.0
+    y: 104.0
+    z: -82.0
+    pitch: 0.0
+    yaw: 0.0
+  block: DIRT
+ZOMBIE_CRYPT_GHOUL:
+  type: ZOMBIE
+  subType: CRYPT_GHOUL
+  delay: 200
+  limit: 30
+  amount: 15
+  pos1:
+    ==: org.bukkit.Location
+    world: world
+    x: -153.0
+    y: 64.0
+    z: -84.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: world
+    x: -32.0
+    y: 36.0
+    z: -160.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE
+ZOMBIE_GOLDEN_GHOUL:
+  type: ZOMBIE
+  subType: GOLDEN_GHOUL
+  delay: 200
+  limit: 1
+  amount: 1
+  pos1:
+    ==: org.bukkit.Location
+    world: world
+    x: -100.0
+    y: 41.0
+    z: -85.0
+    pitch: 0.0
+    yaw: 0.0
+  pos2:
+    ==: org.bukkit.Location
+    world: world
+    x: -100.0
+    y: 41.0
+    z: -85.0
+    pitch: 0.0
+    yaw: 0.0
+  block: STONE

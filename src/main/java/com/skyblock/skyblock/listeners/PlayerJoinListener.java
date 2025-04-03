@@ -18,6 +18,7 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void giveSkyblockMenu(PlayerJoinEvent event) {
         event.getPlayer().getInventory().setItem(8, Util.createSkyblockMenu());
+        event.setJoinMessage(null);
     }
 
 }

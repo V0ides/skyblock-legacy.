@@ -1,0 +1,73 @@
+{
+  "bazaar": {
+    "categories": [
+      {
+        "name": "Farming",
+        "icon": "GOLD_HOE",
+        "color": "YELLOW",
+        "items": [
+          {
+            "name": "Wheat & Seeds",
+            "inventorySize": 36,
+            "subItems": [
+              {
+                "material": "skyblock:wheat",
+                "rarity": "common",
+                "slot": 11
+              },
+              {
+                "material": "skyblock:enchanted_bread",
+                "rarity": "common",
+                "slot": 12
+              },
+              {
+                "material": "skyblock:hay_block",
+                "rarity": "common",
+                "slot": 13
+              },
+              {
+                "material": "skyblock:enchanted_hay_block",
+                "rarity": "uncommon",
+                "slot": 14
+              },
+              {
+                "material": "skyblock:seeds",
+                "rarity": "common",
+                "slot": 15
+              },
+              {
+                "material": "skyblock:enchanted_seeds",
+                "rarity": "common",
+                "slot": 22
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mining",
+        "icon": "DIAMOND_PICKAXE",
+        "color": "AQUA",
+        "items": []
+      },
+      {
+        "name": "Combat",
+        "icon": "IRON_SWORD",
+        "color": "RED",
+        "items": []
+      },
+      {
+        "name": "Woods & Fishes",
+        "icon": "FISHING_ROD",
+        "color": "GOLD",
+        "items": []
+      },
+      {
+        "name": "Oddities",
+        "icon": "ENCHANTMENT_TABLE",
+        "color": "LIGHT_PURPLE",
+        "items": []
+      }
+    ]
+  }
+}
