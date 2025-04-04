@@ -30,7 +30,6 @@ import com.skyblock.skyblock.features.slayer.SlayerHandler;
 import com.skyblock.skyblock.features.slayer.SlayerQuest;
 import com.skyblock.skyblock.features.slayer.SlayerType;
 import com.skyblock.skyblock.features.ranks.PlayerRank;
-import com.skyblock.skyblock.sql.SQLConfiguration;
 import com.skyblock.skyblock.utilities.BossBar;
 import com.skyblock.skyblock.utilities.SkyblockMath;
 import com.skyblock.skyblock.utilities.Util;
@@ -43,6 +42,7 @@ import net.minecraft.server.v1_8_R3.IChatBaseComponent;
 import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
 import org.bukkit.*;
 import org.bukkit.block.Block;
+import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -81,7 +81,7 @@ public class SkyblockPlayer {
     private HashMap<String, Object> extraData;
     private List<PotionEffect> activeEffects;
     private AuctionSettings auctionSettings;
-    private SQLConfiguration config;
+    private FileConfiguration config;
     private ArmorStand petDisplay;
     private BossBar bossBar;
     private Player bukkitPlayer;
@@ -168,7 +168,7 @@ public class SkyblockPlayer {
                 if (pet != null) pet.setActive(true);
             }
 
-            config = new SQLConfiguration(configFile, this);
+            config = YamlConfiguration.loadConfiguration(configFile);
 
             if (getValue("auction.auctionSettings") == null) {
                 auctionSettings = new AuctionSettings(AuctionCategory.WEAPON, AuctionSettings.AuctionSort.HIGHEST, null, AuctionSettings.BinFilter.ALL, false);
@@ -209,7 +209,7 @@ public class SkyblockPlayer {
         }
 
         String activeEffects = activeEffectsString.toString();
-        boolean hasActiveEffects = effects.size() > 0;
+        boolean hasActiveEffects = !effects.isEmpty();
 
         IChatBaseComponent header = new ChatComponentText(
                 ChatColor.AQUA + "You are" + ChatColor.RED + " " + ChatColor.BOLD + "NOT" + ChatColor.RESET + " " +  ChatColor.AQUA + "playing on " + ChatColor.YELLOW + "" + ChatColor.BOLD + "MC.HYPIXEL.NET\n");
@@ -691,7 +691,11 @@ public class SkyblockPlayer {
     public void saveToDisk() {
         for (String path : cacheChanged) {
             config.set(path, dataCache.get(path));
-            config.updateYamlFile();
+            try {
+                config.save(configFile);
+            } catch (IOException e) {
+                System.out.println("[SKYBLOCK ERROR] : Something went wrong while saving data for " + bukkitPlayer.getName());
+            }
         }
     }
 
@@ -711,12 +715,10 @@ public class SkyblockPlayer {
         File folder = new File(Skyblock.getPlugin(Skyblock.class).getDataFolder() + File.separator + "players");
         if (!folder.exists())  folder.mkdirs();
         configFile = new File(Skyblock.getPlugin(Skyblock.class).getDataFolder() + File.separator + "players" + File.separator + getBukkitPlayer().getUniqueId() + ".yml");
-        this.config = new SQLConfiguration(configFile, this);
+        this.config = YamlConfiguration.loadConfiguration(configFile);
         if (!configFile.exists()) {
             try {
                 configFile.createNewFile();
-
-                config.initializeUUID();
 
                 forEachStat((s) -> {
                     config.set("stats." + s.name().toLowerCase(), s.getDefaultValue());
@@ -832,9 +834,9 @@ public class SkyblockPlayer {
                 config.set("harp.godly_imagination.best", -1);
                 config.set("harp.la_vie_en_rose.best", -1);
 
-                config.updateYamlFile();
-
-                Bukkit.getConsoleSender().sendMessage("Config finished: " + config + "");
+                config.save(configFile);
+                // TODO - Implement proper logger!
+                Bukkit.getConsoleSender().sendMessage("[SKYBLOCK LOG] : Successfully initialized configuration for " + bukkitPlayer.getName());
             } catch (IOException e){
                 e.printStackTrace();
             }
@@ -1158,42 +1160,5 @@ public class SkyblockPlayer {
     }
 
     public boolean isTalkingToNPC() { return (boolean) extraData.get("isInteracting"); }
-
-    public void loadCache() {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                try {
-                    Class.forName("org.sqlite.JDBC");
-                    Connection connection = DriverManager.getConnection("jdbc:sqlite:" + SQLConfiguration.f.getAbsolutePath());
-
-                    DatabaseMetaData metaData = connection.getMetaData();
-                    ResultSet resultSet = metaData.getColumns(null, null, "players", null);
-
-                    List<String> columns = new ArrayList<>();
-
-                    while (resultSet.next()) {
-                        String columnName = resultSet.getString("COLUMN_NAME");
-                        columns.add(columnName);
-                    }
-
-                    int i = 0;
-                    for (String column : columns) {
-                        column = column.replaceAll("__", " ").replaceAll("_", ".");
-                        if (dataCache.containsKey(column)) continue;
-
-                        String finalColumn = column;
-                        Util.delay(() -> {
-                            dataCache.put(finalColumn, config.get(finalColumn));
-                        }, i * 5);
-
-                        i++;
-                    }
-                } catch (SQLException | ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.runTaskLaterAsynchronously(Skyblock.getPlugin(), 20);
-    }
 
 }
