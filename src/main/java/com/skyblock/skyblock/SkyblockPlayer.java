@@ -29,6 +29,7 @@ import com.skyblock.skyblock.features.skills.Skill;
 import com.skyblock.skyblock.features.slayer.SlayerHandler;
 import com.skyblock.skyblock.features.slayer.SlayerQuest;
 import com.skyblock.skyblock.features.slayer.SlayerType;
+import com.skyblock.skyblock.features.ranks.PlayerRank;
 import com.skyblock.skyblock.sql.SQLConfiguration;
 import com.skyblock.skyblock.utilities.BossBar;
 import com.skyblock.skyblock.utilities.SkyblockMath;
@@ -93,6 +94,7 @@ public class SkyblockPlayer {
     private ItemStack hand;
     private Pet pet;
     private int tick;
+    private PlayerRank rank;
 
     private static int EVERY_SECOND = 20;
     private static int EVERY_THREE_SECONDS = 60;
@@ -736,6 +738,7 @@ public class SkyblockPlayer {
                 config.set("bank.interest", 2);
                 config.set("bank.recent_transactions", new ArrayList<>());
                 config.set("bank.personal.cooldown", -1); // -1 = not aquired
+                config.set("ranks.player", PlayerRank.DEFAULT);
 
                 for (String skill : Skill.SKILLS) {
                     config.set("skill." + skill.toLowerCase() + ".exp", 0.0);
@@ -903,6 +906,14 @@ public class SkyblockPlayer {
 
     public String getFullSetBonusType() {
         return (String) this.getExtraData().get("fullSetBonusType");
+    }
+    
+    public void setRank(PlayerRank rank) {
+    	setValue("ranks.player", rank);
+    }
+    
+    public PlayerRank getRank() {	
+    return PlayerRank.valueOf(getStringValue("ranks.player"));
     }
 
     public void addCoins(double coins) {
