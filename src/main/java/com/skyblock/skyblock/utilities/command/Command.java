@@ -1,6 +1,7 @@
 package com.skyblock.skyblock.utilities.command;
 
 import com.skyblock.skyblock.Skyblock;
+import com.skyblock.skyblock.utilities.Debug;
 import com.skyblock.skyblock.utilities.command.annotations.*;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -39,14 +40,22 @@ public interface Command {
     }
 
     default void execute(CommandSender sender, String[] args, Skyblock plugin) {
+        Debug debug = new Debug();
+        Player player = (Player) sender;
+        debug.info(player, "Executing §e" + name());
         throw new UnsupportedOperationException("This command does not support being executed by the console");
     }
 
     default void execute(Player player, String[] args, Skyblock plugin) {
+        Debug debug = new Debug();
+        debug.info(player, "Executing §e" + name());
         throw new UnsupportedOperationException("This command does not support being executed by a player");
     }
 
-    default void sendUsage(Player player) { player.sendMessage(ChatColor.RED + usage()); }
+    default void sendUsage(Player player) {
+    	 Debug debug = new Debug();
+    	 debug.warning(player, "Syntax error! sending usage...");
+    	 player.sendMessage(ChatColor.RED + usage()); }
     default void sendUsage(CommandSender sender) { sender.sendMessage(ChatColor.RED + usage()); }
 
 }

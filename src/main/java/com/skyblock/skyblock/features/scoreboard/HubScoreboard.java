@@ -5,6 +5,8 @@ import com.skyblock.skyblock.SkyblockPlayer;
 import com.skyblock.skyblock.features.island.IslandManager;
 import com.skyblock.skyblock.features.location.SkyblockLocation;
 import com.skyblock.skyblock.features.objectives.QuestLine;
+import com.skyblock.skyblock.utilities.Debug;
+import com.skyblock.skyblock.utilities.Timer;
 import com.skyblock.skyblock.utilities.Util;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -20,6 +22,13 @@ public class HubScoreboard extends Scoreboard {
 
     @Override
     void display() {
+        Debug debug = new Debug();
+        Timer timer = new Timer();
+        
+        debug.info(player, "Applying ScoreBoard...");
+        
+        timer.start();
+        
         SkyblockPlayer skyblockPlayer = SkyblockPlayer.getPlayer(player);
 
         DecimalFormat formatter = new DecimalFormat("#,###");
@@ -78,5 +87,9 @@ public class HubScoreboard extends Scoreboard {
 
         addLine(2, ChatColor.WHITE + "  ");
         addLine(1, ChatColor.YELLOW + "www.hypixel.net");
+        
+        timer.stop();
+        
+        debug.info(player, "Applied ScoreBoard in §9" + timer.endTime() + " §fms.");
     }
 }

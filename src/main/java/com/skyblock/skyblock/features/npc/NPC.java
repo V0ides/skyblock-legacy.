@@ -2,6 +2,7 @@ package com.skyblock.skyblock.features.npc;
 
 import com.skyblock.skyblock.SkyblockPlayer;
 import com.skyblock.skyblock.events.SkyblockPlayerNPCClickEvent;
+import com.skyblock.skyblock.utilities.Debug;
 import com.skyblock.skyblock.utilities.Util;
 import lombok.Data;
 import net.citizensnpcs.api.event.NPCRightClickEvent;
@@ -50,6 +51,9 @@ public class NPC implements Listener {
         if (!event.getNPC().equals(this.npc)) return;
 
         Player player = event.getClicker();
+        
+        Debug debug = new Debug();
+        debug.info(player, "Registered right click on NPC.");
 
         this.action.accept(player);
 

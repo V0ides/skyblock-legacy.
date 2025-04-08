@@ -8,6 +8,8 @@ import com.skyblock.skyblock.features.slayer.SlayerBoss;
 import com.skyblock.skyblock.features.slayer.SlayerHandler;
 import com.skyblock.skyblock.features.slayer.SlayerQuest;
 import com.skyblock.skyblock.features.slayer.gui.SlayerGUI;
+import com.skyblock.skyblock.utilities.Debug;
+import com.skyblock.skyblock.utilities.Timer;
 import com.skyblock.skyblock.utilities.Util;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -23,6 +25,13 @@ public class SlayerScoreboard extends Scoreboard {
 
     @Override
     void display() {
+        Debug debug = new Debug();
+        Timer timer = new Timer();
+        
+        debug.info(player, "Applying Slayer ScoreBoard...");
+        
+        timer.start();
+        
         SkyblockPlayer skyblockPlayer = SkyblockPlayer.getPlayer(player);
 
         DecimalFormat formatter = new DecimalFormat("#,###");
@@ -81,5 +90,7 @@ public class SlayerScoreboard extends Scoreboard {
         }
         addLine(2, ChatColor.WHITE + "  ");
         addLine(1, ChatColor.YELLOW + "www.hypixel.net");
+        timer.stop();
+        debug.info(player, "Applied Slayer ScoreBoard in §9" + timer.endTime() + " §fms.");
     }
 }

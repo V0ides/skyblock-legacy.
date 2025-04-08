@@ -13,4 +13,6 @@ public class Timer {
         long elapsedTime = endTime - startTime;
         // ("Execution time: " + elapsedTime + " milliseconds.");
     }
+    
+    public String endTime() { return endTime(); }
 }

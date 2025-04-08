@@ -4,6 +4,7 @@ package com.skyblock.skyblock.listeners;
 import com.skyblock.skyblock.SkyblockPlayer;
 import com.skyblock.skyblock.features.island.IslandManager;
 import com.skyblock.skyblock.features.ranks.PlayerRank;
+import com.skyblock.skyblock.utilities.Debug;
 import com.skyblock.skyblock.utilities.Util;
 import com.skyblock.skyblock.utilities.item.ItemBuilder;
 import org.bukkit.Bukkit;
@@ -36,6 +37,9 @@ public class PlayerJoinListener implements Listener {
         
         player.setDisplayName(playerRankedName);
         player.setPlayerListName(playerRankedName);
+        
+        Debug debug = new Debug();
+        debug.info(player, "Debug mode is currently active.");
     }
     
     @EventHandler(priority = EventPriority.LOW)

@@ -107,12 +107,7 @@ public class PlayerListener implements Listener {
                 skyblockPlayer.setHand(player.getItemInHand());
             }
 
-//            new BukkitRunnable() {
-//                @Override
-//                public void run() {
-                    skyblockPlayer.tick();
-//                }
-//            }.runTaskLater(plugin, 20L);
+            skyblockPlayer.tick();
 
             this.plugin.getMinionHandler().reloadPlayer(skyblockPlayer, false);
 
@@ -121,14 +116,13 @@ public class PlayerListener implements Listener {
             }
 
             Util.delay(() -> {
-                if (!Skyblock.getPlugin().getFairySoulHandler().initialized) Skyblock.getPlugin().getFairySoulHandler().init();
+                if (!Skyblock.getPlugin().getFairySoulHandler().initialized)
+                    Skyblock.getPlugin().getFairySoulHandler().init();
 
                 if (skyblockPlayer.isOnIsland()) player.performCommand("is");
 
                 player.teleport(Util.getSpawnLocation(skyblockPlayer.getCurrentLocationName()));
             }, 1);
-
-            skyblockPlayer.loadCache();
 
             new BukkitRunnable() {
                 @Override
@@ -142,7 +136,7 @@ public class PlayerListener implements Listener {
             }.runTaskTimer(plugin, 5L, 1);
         });
 
-        /* 0ms */ player.sendMessage(ChatColor.AQUA + "[DEBUG] " + ChatColor.YELLOW + "Took " + Util.getTimeDifferenceAndColor(start, System.currentTimeMillis()) + ChatColor.YELLOW + " to retrieve your Skyblock Data!");
+       player.sendMessage(ChatColor.AQUA + "[DEBUG] " + ChatColor.YELLOW + "Took " + Util.getTimeDifferenceAndColor(start, System.currentTimeMillis()) + ChatColor.YELLOW + " to retrieve your Skyblock Data!");
     }
 
     @EventHandler
